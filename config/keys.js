@@ -1,12 +1,9 @@
-// module.exports = {
-//   mongoURI: 'mongodb://localhost:27017/devconnector',
-//   jwtSecret:'mySecret'
-// };
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys_prod');
+} else {
+  module.exports = require('./keys_dev');
+}
 
-module.exports = {
-  mongoURI: 'mongodb+srv://sher123:sher123@devconnector.dhcfb.mongodb.net/mern',
-  jwtSecret:'mySecret'
-};
 
 
 
